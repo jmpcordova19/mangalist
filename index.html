@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Jean's Manga Collection List</title>
+		<style>
+			body{
+				margin: 0 auto;
+				background: linear-gradient(#D8E2DC 0%, #588157 100%);
+				padding: 45px;
+			}
+			h2{
+				text-align: center;
+				font-family: Century Gothic, Arial, Helvetica, sans-serif;
+				color: #588157;
+			}
+			img{
+				display: block;
+				border-radius: 25px;
+			}
+			*{
+				padding:20px;
+				margin:0;
+				box-sizing: border-box;
+			}
+			.imgUrl{
+				padding:0;
+			}
+			td, th{
+				border:1px solid;
+				padding:0 10px;
+				font-family: Serif;
+			}
+			th{ 
+				background-color: #588157;
+				color: #D8E2DC;
+				border: none;
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+				height: 75px;
+			}
+			td{
+				background-color: #D8E2DC;
+				color: #588157;
+				text-align: center;
+				height: 100px;
+			}
+			#book1 .imgUrl{
+				border-left: none;
+			}
+			#book2 .imgUrl{
+				border-left: none;
+			}
+			#book3 .imgUrl{
+				border-left: none;
+			}
+			#book4 .imgUrl{
+				border-left: none;
+			}
+			#book5 .imgUrl{
+				border-bottom-left-radius: 15px;
+				border-left: none;
+				border-bottom: none;
+			}
+			#book1 .title{
+				font-weight: bold;
+			}
+			#book2 .title{
+				font-weight: bold;
+			}
+			#book3 .title{
+				font-weight: bold;
+			}
+			#book4 .title{
+				font-weight: bold;
+			}
+			#book5 .title{
+				font-weight: bold;
+				border-bottom: none;
+			}
+			#book1 .author{
+				font-style: italic;
+			}
+			#book2 .author{
+				font-style: italic;
+			}
+			#book3 .author{
+				font-style: italic;
+			}
+			#book4 .author{
+				font-style: italic;
+			}
+			#book5 .author{
+				font-style: italic;
+				border-bottom: none;
+			}
+			#book5 .genre{
+				border-bottom: none;
+			}
+			#book1 .description{
+				text-align: left;
+				border-right: none;
+			}
+			#book2 .description{
+				text-align: left;
+				border-right: none;
+			}
+			#book3 .description{
+				text-align: left;
+				border-right: none;
+			}
+			#book4 .description{
+				text-align: left;
+				border-right: none;
+			}
+			#book5 .description{
+				text-align: left;
+				border-right: none;
+				border-bottom: none;
+				border-bottom-right-radius: 15px;
+			}
+	</style>
+</head>
+<body>
+				<h2>Jean's Manga Collection List</h2><br/>
+	<table>
+		<tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Description</th>
+		</tr>
+		<tr id="book1">
+            <td class="imgUrl"><img></td>
+            <td class="title"></td>
+            <td class="author"></td>
+            <td class="genre"></td>
+            <td class="description"></td>
+		</tr>
+		<tr id="book2">
+            <td class="imgUrl"><img></td>
+            <td class="title"></td>
+            <td class="author"></td>
+            <td class="genre"></td>
+            <td class="description"></td>
+		</tr>
+		<tr id="book3">
+            <td class="imgUrl"><img></td>
+            <td class="title"></td>
+            <td class="author"></td>
+            <td class="genre"></td>
+            <td class="description"></td>
+		</tr>
+		<tr id="book4">
+            <td class="imgUrl"><img></td>
+            <td class="title"></td>
+            <td class="author"></td>
+            <td class="genre"></td>
+            <td class="description"></td>
+		</tr>
+		<tr id="book5">
+            <td class="imgUrl"><img></td>
+            <td class="title"></td>
+            <td class="author"></td>
+            <td class="genre"></td>
+            <td class="description"></td>
+		</tr>
+	</table>
+		<script>
+
+let book1 = {};
+
+let book2 = {
+    imgUrl: './images/attack-on-titan.jpg',
+    title: 'Attack on Titan',
+    author: 'Hajime Isayama',
+    genre: 'Action, Drama, Mystery',
+    description: 'A post-apocalyptic story about humanity\'s fight against giant humanoid creatures called Titans.'
+}
+
+book1.imgUrl = 'images/jujutsu-kaisen.jpg';
+book1.title = 'Jujutsu Kaisen';
+book1.author = 'Gege Akutami';
+book1.genre = 'Supernatural, Dark Fantasy, Comedy';
+book1.description = 'A high school student becomes a sorcerer and fights curses in order to save people from supernatural threats.';
+
+let book3 = {
+    imgUrl: './images/haikyu.jpg',
+    title: 'Haikyu!!',
+    author: 'Haruichi Furudate',
+    genre: 'Sports, Comedy, Drama',
+    description: 'A volleyball-focused manga about a high school team\'s journey to become national champions.'
+}
+
+let book4 = {
+    imgUrl: './images/assassination-classroom.jpg',
+    title: 'Assassination Classroom',
+    author: 'Yusei Matsui',
+    genre: 'Action, Comedy, Science Fiction',
+    description: 'A class of students must assassinate their alien teacher before he destroys the Earth.'
+}
+
+let book5 = {
+    imgUrl: './images/spy-family.jpg',
+    title: 'Spy Family',
+    author: 'Tatsuya Endo',
+    genre: 'Action, Comedy, Detective/Mystery',
+    description: 'A spy, an assassin, and a telepathic girl pose as a family to carry out secret missions.'
+}
+
+let book1ImgUrl = document.querySelector('#book1 .imgUrl');
+let book1Title = document.querySelector('#book1 .title');
+let book1Author = document.querySelector('#book1 .author');
+let book1Genre = document.querySelector('#book1 .genre');
+let book1Description = document.querySelector('#book1 .description');
+
+book1ImgUrl.querySelector('img').setAttribute('src', book1.imgUrl);
+book1ImgUrl.querySelector('img').setAttribute('style', 'width:200px');
+
+book1Title.innerHTML = book1.title;
+book1Author.innerHTML = book1.author;
+book1Genre.innerHTML = book1.genre;
+book1Description.innerHTML = book1.description;
+
+/* const myImg = document.querySelector("img")
+myImg.src ="jujutsu-kaisen.jpg"; */ 
+
+let book2ImgUrl = document.querySelector('#book2 .imgUrl');
+let book2Title = document.querySelector('#book2 .title');
+let book2Author = document.querySelector('#book2 .author');
+let book2Genre = document.querySelector('#book2 .genre');
+let book2Description = document.querySelector('#book2 .description');
+
+book2ImgUrl.querySelector('img').setAttribute('src', book2.imgUrl);
+book2ImgUrl.querySelector('img').setAttribute('style', 'width:200px');
+
+book2Title.innerHTML = book2.title;
+book2Author.innerHTML = book2.author;
+book2Genre.innerHTML = book2.genre;
+book2Description.innerHTML = book2.description;
+
+let book3ImgUrl = document.querySelector('#book3 .imgUrl');
+let book3Title = document.querySelector('#book3 .title');
+let book3Author = document.querySelector('#book3 .author');
+let book3Genre = document.querySelector('#book3 .genre');
+let book3Description = document.querySelector('#book3 .description');
+
+book3ImgUrl.querySelector('img').setAttribute('src', book3.imgUrl);
+book3ImgUrl.querySelector('img').setAttribute('style', 'width:200px');
+
+book3Title.innerHTML = book3.title;
+book3Author.innerHTML = book3.author;
+book3Genre.innerHTML = book3.genre;
+book3Description.innerHTML = book3.description;
+
+let book4ImgUrl = document.querySelector('#book4 .imgUrl');
+let book4Title = document.querySelector('#book4 .title');
+let book4Author = document.querySelector('#book4 .author');
+let book4Genre = document.querySelector('#book4 .genre');
+let book4Description = document.querySelector('#book4 .description');
+
+book4ImgUrl.querySelector('img').setAttribute('src', book4.imgUrl);
+book4ImgUrl.querySelector('img').setAttribute('style', 'width:200px');
+
+book4Title.innerHTML = book4.title;
+book4Author.innerHTML = book4.author;
+book4Genre.innerHTML = book4.genre;
+book4Description.innerHTML = book4.description;
+
+let book5ImgUrl = document.querySelector('#book5 .imgUrl');
+let book5Title = document.querySelector('#book5 .title');
+let book5Author = document.querySelector('#book5 .author');
+let book5Genre = document.querySelector('#book5 .genre');
+let book5Description = document.querySelector('#book5 .description');
+
+book5ImgUrl.querySelector('img').setAttribute('src', book5.imgUrl);
+book5ImgUrl.querySelector('img').setAttribute('style', 'width:200px');
+
+book5Title.innerHTML = book5.title;
+book5Author.innerHTML = book5.author;
+book5Genre.innerHTML = book5.genre;
+book5Description.innerHTML = book5.description;
+
+
+let table = document.querySelector('table');
+table.style.borderCollapse = 'collapse';
+
+		</script>
+	</body>
+</html>
